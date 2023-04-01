@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_ui/shared/components.dart';
 
 class UiTextOption extends StatefulWidget {
   const UiTextOption({Key? key}) : super(key: key);
