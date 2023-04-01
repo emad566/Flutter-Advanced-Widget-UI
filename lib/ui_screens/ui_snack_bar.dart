@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_ui/shared/components.dart';
 
 class UiSnackBar extends StatefulWidget {
   const UiSnackBar({Key? key}) : super(key: key);
@@ -16,13 +17,39 @@ class _UiSnackBarState extends State<UiSnackBar> {
           child: Container(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              children: const [
-                Text('UiSnackBar'),
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    mySnackBar(context);
+                  },
+                  child: myText('Show SnackBar'),
+                ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  void mySnackBar(BuildContext context) {
+    SnackBar snackBar = SnackBar(
+      content: myText('Snack Message'),
+      backgroundColor: Colors.red,
+      shape:RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
+      elevation: 20,
+      duration: const Duration(seconds: 2),
+      action: SnackBarAction(
+        textColor: Colors.white,
+        label: 'Label',
+        onPressed: (){
+
+        },
+      ),
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }

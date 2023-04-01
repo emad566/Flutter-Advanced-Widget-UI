@@ -48,7 +48,7 @@ toggleDrawer(scaffoldKey) async {
   }
 }
 
-List<Widget> listScreens({required scaffoldKey, required Function setState }){
+List<Widget> listScreens({required scaffoldKey, required Function setState, String? search }){
   List<Widget> screens = const [
     UiAlertDialog(),
     UiAppBarSilver(),
@@ -76,7 +76,10 @@ List<Widget> listScreens({required scaffoldKey, required Function setState }){
     UiToast(),
   ];
 
-  return screens.map((Widget S){
+
+  List<Widget> screensSearched = (search == null || search == '')? screens
+  : screens.where((Widget S) => S.toString().toLowerCase().contains(search.toLowerCase())).toList();
+  return screensSearched.map((Widget S){
     return ListTile(
       onTap: (){
         setState(S);
