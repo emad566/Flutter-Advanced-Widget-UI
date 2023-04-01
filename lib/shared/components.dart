@@ -87,3 +87,7 @@ List<Widget> listScreens({required scaffoldKey, required Function setState }){
     );
   }).toList();
 }
+
+Widget myText (String text){
+  return Text(text, style: const TextStyle(fontSize: 24),);
+}
