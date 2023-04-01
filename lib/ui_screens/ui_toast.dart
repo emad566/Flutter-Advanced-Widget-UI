@@ -25,7 +25,7 @@ class _UiToastState extends State<UiToast> {
                       animation: StyledToastAnimation.scale,
                       reverseAnimation: StyledToastAnimation  .fade,
                       // position: StyledToastPosition.center,
-                      position: StyledToastPosition(align: Alignment.bottomCenter, offset: 100.0),
+                      position: const StyledToastPosition(align: Alignment.bottomCenter, offset: 100.0),
                       animDuration: const Duration(seconds: 1),
                       duration: const Duration(seconds: 4),
                       curve: Curves.elasticOut,
