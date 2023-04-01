@@ -21,6 +21,7 @@ import 'package:flutter_widget_ui/ui_screens/ui_radio_button.dart';
 import 'package:flutter_widget_ui/ui_screens/ui_radio_list_tile.dart';
 import 'package:flutter_widget_ui/ui_screens/ui_snack_bar.dart';
 import 'package:flutter_widget_ui/ui_screens/ui_switch.dart';
+import 'package:flutter_widget_ui/ui_screens/ui_text_options.dart';
 import 'package:flutter_widget_ui/ui_screens/ui_textform_field.dart';
 import 'package:flutter_widget_ui/ui_screens/ui_toast.dart';
 
@@ -72,6 +73,7 @@ List<Widget> listScreens({required scaffoldKey, required Function setState, Stri
     UiRadioListTile(),
     UiSnackBar(),
     UiSwitch(),
+    UiTextOption(),
     UiTextFormField(),
     UiToast(),
   ];
