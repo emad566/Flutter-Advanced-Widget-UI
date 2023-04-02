@@ -9,6 +9,7 @@ class UiRadioListTile extends StatefulWidget {
 }
 
 class _UiRadioListTileState extends State<UiRadioListTile> {
+  dynamic groupValue;
   Map<int, dynamic> answers = {};
 
   void myDialog(BuildContext context, String correct, int index) {
@@ -90,11 +91,12 @@ class _UiRadioListTileState extends State<UiRadioListTile> {
       title: myText(value),
       // subtitle: myText('subTitle'),
       value: value,
-      groupValue: answers[index],
+      groupValue:  answers[index],
       onChanged: (val){
         setState(() {
+          groupValue = val;
           answers[index] = val;
-          myDialog(context, correct, index);
+          // myDialog(context, correct, index);
         });
       },
     );
